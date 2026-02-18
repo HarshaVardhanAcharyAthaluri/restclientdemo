@@ -7,9 +7,11 @@ import org.springframework.web.client.RestClient;
 @Configuration
 public class RestConfig {
 
+
+// Restclient Builder avilable in HttpCLient Dependency. add httclient starter to use
     @Bean
-    public RestClient serviceOneClient() {
-        return RestClient.builder()
+    public RestClient restClient(RestClient.Builder builder) {
+        return builder
                 .baseUrl("http://localhost:9090")
                 .build();
     }
