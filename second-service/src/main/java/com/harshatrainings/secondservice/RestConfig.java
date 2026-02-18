@@ -6,7 +6,7 @@ import org.springframework.web.client.RestClient;
 
 @Configuration
 public class RestConfig {
-
+// This way we can direclty build without http client dependency
     @Bean
     public RestClient serviceOneClient() {
         return RestClient.builder()

@@ -9,6 +9,7 @@ public class RestConfig {
 
 
 // Restclient Builder avilable in HttpCLient Dependency. add httclient starter to use
+    //to build without http client dependency check secondary service
     @Bean
     public RestClient restClient(RestClient.Builder builder) {
         return builder
