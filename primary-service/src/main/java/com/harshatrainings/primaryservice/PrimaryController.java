@@ -10,10 +10,12 @@ public class PrimaryController {
 
 
     @Autowired
-    private RestClient restClient;
+    private  RestClient restClient;
+
 
     @GetMapping("/greet")
     public String greet(){
-        return restClient.get().uri("http://localhost:9090/msg").retrieve().body(String.class);
+        return restClient.get().uri("/msg").retrieve().body(String.class);
     }
+
 }
